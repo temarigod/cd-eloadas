@@ -11,4 +11,8 @@ export class SidemenuComponent implements OnInit {
   constructor(public readonly authService: AuthService) {}
 
   ngOnInit(): void {}
+
+  public ngDoCheck(): void {
+    console.log('Sidemenu');
+  }
 }

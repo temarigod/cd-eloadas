@@ -14,4 +14,7 @@ export class AuthStatusComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public ngDoCheck(): void {
+    console.log('AuthStatus');
+  }
 }
