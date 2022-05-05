@@ -5,7 +5,7 @@ import { AuthService } from 'src/app/services/auth.service';
   selector: 'app-auth-status',
   templateUrl: './auth-status.component.html',
   styleUrls: ['./auth-status.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AuthStatusComponent implements OnInit {
 

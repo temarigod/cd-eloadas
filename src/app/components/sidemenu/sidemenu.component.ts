@@ -5,7 +5,7 @@ import { AuthService } from 'src/app/services/auth.service';
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
   styleUrls: ['./sidemenu.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidemenuComponent implements OnInit {
   constructor(public readonly authService: AuthService) {}

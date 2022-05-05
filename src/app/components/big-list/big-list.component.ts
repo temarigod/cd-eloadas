@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   selector: 'app-big-list',
   templateUrl: './big-list.component.html',
   styleUrls: ['./big-list.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BigListComponent implements OnInit {
   public items = Array.from({
