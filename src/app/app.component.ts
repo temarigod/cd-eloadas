@@ -22,6 +22,7 @@ export class AppComponent implements DoCheck {
   cdCounter: number = 0;
 
   public ngDoCheck(): void {
+    console.log('App');
     this.cdCounter++;
     this.cdCounterElement.nativeElement.innerText = this.cdCounter.toString();
   }

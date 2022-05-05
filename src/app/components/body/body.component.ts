@@ -7,10 +7,11 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.Default,
 })
 export class BodyComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  public ngDoCheck(): void {
+    console.log('Body');
   }
-
 }

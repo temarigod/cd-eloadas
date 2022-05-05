@@ -14,4 +14,8 @@ export class BigListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  public ngDoCheck(): void {
+    console.log('BigList');
+  }
 }
