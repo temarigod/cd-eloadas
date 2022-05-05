@@ -3,8 +3,10 @@ import {
   Component,
   DoCheck,
   ElementRef,
+  OnInit,
   ViewChild,
 } from '@angular/core';
+import { MouseTrackerService } from './services/mouse-tracker.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +14,7 @@ import {
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent implements DoCheck {
+export class AppComponent implements DoCheck, OnInit {
   @ViewChild('cdCounter', {
     static: true,
   })
@@ -20,6 +22,12 @@ export class AppComponent implements DoCheck {
   title = 'cd-eloadas';
 
   cdCounter: number = 0;
+
+  constructor(private readonly mouseTrackerService: MouseTrackerService) {}
+
+  public ngOnInit(): void {
+    this.mouseTrackerService.start();
+  }
 
   public ngDoCheck(): void {
     this.cdCounter++;

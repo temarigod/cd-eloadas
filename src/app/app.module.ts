@@ -15,7 +15,7 @@ import { AuthStatusComponent } from './components/auth-status/auth-status.compon
     BodyComponent,
     BigListComponent,
     ListItemComponent,
-    AuthStatusComponent
+    AuthStatusComponent,
   ],
   imports: [
     BrowserModule
