@@ -1,3 +1,3 @@
 <button (click)="authService.toggleLogin()">
-  {{ authService.loggedIn ? "Log out" : "Log in" }}
+  {{ (authService.loggedIn$ | async) ? "Log out" : "Log in" }}
 </button>
